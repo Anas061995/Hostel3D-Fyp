@@ -20,7 +20,7 @@
 <section class="content-header">
   <h1>
   SuperAdmin/
-    <small>Hostels</small>
+    <small>HAMNA</small>
 
   </h1>
   <br>
@@ -50,9 +50,9 @@
                   <td>
                   @foreach($var->users as $var1)
                   {{$var1->name}}
-                  
+
                 @endforeach
-                   </td> 
+                   </td>
                   <td> @foreach($var->users as $var1)
                   {{$var1->contactno}}
                   @endforeach
