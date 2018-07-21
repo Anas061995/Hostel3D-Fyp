@@ -20,7 +20,7 @@
 <section class="content-header">
   <h1>
   SuperAdmin/
-    <small>HAMNA</small>
+    <small>Hostels</small>
 
   </h1>
   <br>
