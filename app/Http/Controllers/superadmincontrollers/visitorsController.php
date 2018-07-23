@@ -30,13 +30,13 @@ class visitorsController extends Controller
     public function index()
     {
         $user = \Auth::user();
-        if ($user->hasRole('superadmin')) { 
+        if ($user->hasRole('superadmin')) {
             return view('superadmin.visitors');
         }
         else{
             return redirect()->route('welcome')->with(['message' => 'You are not super admin']);
         }
-               
+
 
     }
 

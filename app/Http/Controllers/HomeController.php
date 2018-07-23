@@ -1,4 +1,4 @@
-<?php
+s<?php
 
 namespace App\Http\Controllers;
 
@@ -30,8 +30,8 @@ class HomeController extends Controller
     public function index()
     {
         $user = \Auth::user();
-    
-        if ($user->hasRole('superadmin')) { 
+
+        if ($user->hasRole('superadmin')) {
             return redirect()->route('superadmin.dashboard');
 
 
@@ -44,10 +44,10 @@ class HomeController extends Controller
             }
             elseif($user->hasPermission('hostels'))
             {
-            return view('home');
+            return view('hosteladmin.hosteladmindashboard');
             }
         }
-               
+
 
     }
 
