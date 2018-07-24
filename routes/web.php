@@ -23,3 +23,18 @@ Route::get('/updaterequests', 'superadmincontrollers\updaterequestsController@in
 Route::post('/acceptrequest', 'superadmincontrollers\registrationrequestsController@accept_req')->name('acceptrequest');
 Route::post('/rejectrequest', 'superadmincontrollers\registrationrequestsController@reject_req')->name('rejectrequest');
 Route::post('/selectedhosteldetails', 'superadmincontrollers\hostelController@selected_details')->name('selectedhosteldetails');
+
+//Routes for HOSTEL ADMIN
+
+Route::get('/dashboard', 'hosteladmincontrollers\hosteladmindashboardController@index')->name('hosteladmin.hosteladmindashboard');
+Route::get('/staff', 'hosteladmincontrollers\staffController@index')->name('hosteladmin.staff');
+Route::get('/rooms', 'hosteladmincontrollers\roomsController@index')->name('hosteladmin.rooms');
+Route::get('/reviews', 'hosteladmincontrollers\reviewsController@index')->name('hosteladmin.reviews');
+Route::get('/reports', 'hosteladmincontrollers\reportsController@index')->name('hosteladmin.reports');
+Route::get('/history', 'hosteladmincontrollers\historyController@index')->name('hosteladmin.history');
+Route::get('/complaints', 'hosteladmincontrollers\complaintsController@index')->name('hosteladmin.complaints');
+Route::get('/model', 'hosteladmincontrollers\modelController@index')->name('hosteladmin.model');
+Route::get('/residents', 'hosteladmincontrollers\residentController@index')->name('hosteladmin.residents');
+Route::get('/finance', 'hosteladmincontrollers\financeController@index')->name('hosteladmin.finance');
+Route::get('/reservations', 'hosteladmincontrollers\reservationController@index')->name('hosteladmin.reservations');
+Route::get('/mess', 'hosteladmincontrollers\messController@index')->name('hosteladmin.mess');

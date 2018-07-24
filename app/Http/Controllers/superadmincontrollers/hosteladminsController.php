@@ -1,8 +1,9 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\superadmincontrollers;
 
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
 use DB;
 /* use App\Models\Form;
@@ -30,7 +31,7 @@ class HosteladminsController extends Controller
     public function index()
     {
         $user = \Auth::user();
-        if ($user->hasRole('superadmin ')) { 
+        if ($user->hasRole('superadmin ')) {
             return view('superadmin.hosteladmins');
         }
         else{

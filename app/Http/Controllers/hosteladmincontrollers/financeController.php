@@ -1,11 +1,10 @@
 <?php
 
-namespace App\Http\Controllers\superadmincontrollers;
-
-use Illuminate\Http\Request;
+namespace App\Http\Controllers\hosteladmincontrollers;
 use App\Http\Controllers\Controller;
+use Illuminate\Http\Request;
 
-class SuperadmindashboardController extends Controller
+class financeController extends Controller
 {
     /**
      * Create a new controller instance.
@@ -24,6 +23,6 @@ class SuperadmindashboardController extends Controller
      */
     public function index()
     {
-        return view('superadmin.dashboard');
+        return view('hosteladmin.hostelfinance');
     }
 }

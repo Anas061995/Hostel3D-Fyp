@@ -1,16 +1,9 @@
 <?php
 
-namespace App\Http\Controllers\superadmincontrollers;
+namespace App\Http\Controllers\hosteladmincontrollers;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-
-use DB;
-/* use App\Models\Form;
-use App\Models\Organization;
-use App\Models\Department;
-use App\Models\Formdetail;
- */
 class reportsController extends Controller
 {
     /**
@@ -30,15 +23,6 @@ class reportsController extends Controller
      */
     public function index()
     {
-        $user = \Auth::user();
-        if ($user->hasRole('superadmin')) {
-            return view('superadmin.reports');
-        }
-        else{
-            return redirect()->route('welcome')->with(['message' => 'You are not super admin']);
-        }
-
-
+        return view('hosteladmin.hostelreports');
     }
-
 }

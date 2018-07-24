@@ -1,4 +1,4 @@
-s<?php
+<?php
 
 namespace App\Http\Controllers;
 
@@ -44,7 +44,7 @@ class HomeController extends Controller
             }
             elseif($user->hasPermission('hostels'))
             {
-            return view('hosteladmin.hosteladmindashboard');
+              return redirect()->route('hosteladmin.hosteladmindashboard');
             }
         }
 
