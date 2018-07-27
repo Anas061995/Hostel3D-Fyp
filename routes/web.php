@@ -12,7 +12,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/superadmindashboard', 'superadmincontrollers\SuperadmindashboardController@index')->name('superadmin.dashboard');
 Route::get('/hostels', 'superadmincontrollers\hostelController@index')->name('superadmin.hostels');
 Route::get('/hosteladmins', 'superadmincontrollers\hosteladminsController@index')->name('superadmin.hosteladmins');
-Route::get('/hostelspayment', 'hostelspaymentController@index')->name('superadmin.hostelspayment');
+Route::get('/hostelspayment', 'superadmincontrollers\hostelspaymentController@index')->name('superadmin.hostelspayment');
 Route::get('/hostelsresidents', 'superadmincontrollers\hostelsresidentsController@index')->name('superadmin.hostelsresidents');
 Route::get('/superreports', 'superadmincontrollers\reportsController@index')->name('superadmin.reports');
 Route::get('/visitors', 'superadmincontrollers\visitorsController@index')->name('superadmin.visitors');

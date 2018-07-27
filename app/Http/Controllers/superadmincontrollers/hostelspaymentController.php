@@ -11,7 +11,7 @@ use App\Models\Organization;
 use App\Models\Department;
 use App\Models\Formdetail;
  */
-class HostelspaymentController extends Controller
+class hostelspaymentController extends Controller
 {
     /**
      * Create a new controller instance.
