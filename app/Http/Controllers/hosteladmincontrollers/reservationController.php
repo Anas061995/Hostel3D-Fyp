@@ -23,6 +23,6 @@ class reservationController extends Controller
      */
     public function index()
     {
-        return view('hosteladmin.reservations');
+        return view('hosteladmin.hostelreservations');
     }
 }

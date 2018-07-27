@@ -33,8 +33,6 @@ class HomeController extends Controller
 
         if ($user->hasRole('superadmin')) {
             return redirect()->route('superadmin.dashboard');
-
-
         }
         elseif($user->hasRole('hosteladmin')){
             if($user->hasPermission('none'))
