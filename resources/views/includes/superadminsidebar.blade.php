@@ -26,7 +26,7 @@
 
       <ul class="sidebar-menu" data-widget="tree">
 
-        <li class="active"><a href="#"><i class="fa fa-link"></i> <span>DashBoard</span></a></li>
+        <li class="active"><a href="{{route('superadmin.dashboard')}}"><i class="fa fa-link"></i> <span>DashBoard</span></a></li>
         <li class="treeview">
           <a href="#"><i class="fa fa-link"></i> <span>Hostels</span>
             <span class="pull-right-container">

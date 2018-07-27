@@ -1,8 +1,9 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\superadmincontrollers;
 
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
 use DB;
 /* use App\Models\Form;
@@ -30,13 +31,13 @@ class visitorsController extends Controller
     public function index()
     {
         $user = \Auth::user();
-        if ($user->hasRole('superadmin')) { 
+        if ($user->hasRole('superadmin')) {
             return view('superadmin.visitors');
         }
         else{
             return redirect()->route('welcome')->with(['message' => 'You are not super admin']);
         }
-               
+
 
     }
 

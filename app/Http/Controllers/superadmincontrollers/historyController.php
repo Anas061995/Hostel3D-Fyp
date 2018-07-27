@@ -1,16 +1,16 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\superadmincontrollers;
 
 use Illuminate\Http\Request;
-
+ use App\Http\Controllers\Controller;
 use DB;
 /* use App\Models\Form;
 use App\Models\Organization;
 use App\Models\Department;
 use App\Models\Formdetail;
  */
-class HosteladminsController extends Controller
+class historyController extends Controller
 {
     /**
      * Create a new controller instance.
@@ -30,8 +30,8 @@ class HosteladminsController extends Controller
     public function index()
     {
         $user = \Auth::user();
-        if ($user->hasRole('superadmin ')) { 
-            return view('superadmin.hosteladmins');
+        if ($user->hasRole('superadmin')) {
+            return view('superadmin.history');
         }
         else{
             return redirect()->route('welcome')->with(['message' => 'You are not super admin']);

@@ -1,8 +1,9 @@
 <?php
 
-namespace App\Http\Controllers;
-
+namespace App\Http\Controllers\superadmincontrollers;
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+
 
 use DB;
 /* use App\Models\Form;
@@ -30,13 +31,13 @@ class reportsController extends Controller
     public function index()
     {
         $user = \Auth::user();
-        if ($user->hasRole('superadmin')) { 
+        if ($user->hasRole('superadmin')) {
             return view('superadmin.reports');
         }
         else{
             return redirect()->route('welcome')->with(['message' => 'You are not super admin']);
         }
-               
+
 
     }
 

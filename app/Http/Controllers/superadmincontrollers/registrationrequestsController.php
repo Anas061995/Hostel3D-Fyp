@@ -1,8 +1,9 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\superadmincontrollers;
 
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
 use DB;
 /* use App\Models\Form;
@@ -34,11 +35,11 @@ class registrationrequestsController extends Controller
         {
                 $hosteldetails = \App\Models\Hostel::all();
                     return view('superadmin.registrationrequests',['hosteldetails'=>$hosteldetails]);
-            }      
+            }
         else
         {
             return redirect()->route('welcome')->with(['message' => 'You are not super admin']);
-        }          
+        }
     }
 
     public function accept_req(Request $request)
@@ -56,4 +57,3 @@ class registrationrequestsController extends Controller
     }
 
 }
-

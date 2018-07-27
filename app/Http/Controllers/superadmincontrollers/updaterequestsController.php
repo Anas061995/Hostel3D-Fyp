@@ -1,6 +1,7 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\superadmincontrollers;
+use App\Http\Controllers\Controller;
 
 use Illuminate\Http\Request;
 
@@ -10,7 +11,7 @@ use App\Models\Organization;
 use App\Models\Department;
 use App\Models\Formdetail;
  */
-class historyController extends Controller
+class updaterequestsController extends Controller
 {
     /**
      * Create a new controller instance.
@@ -30,13 +31,13 @@ class historyController extends Controller
     public function index()
     {
         $user = \Auth::user();
-        if ($user->hasRole('superadmin')) { 
-            return view('superadmin.history');
+        if ($user->hasRole('superadmin')) {
+            return view('superadmin.updaterequests');
         }
         else{
             return redirect()->route('welcome')->with(['message' => 'You are not super admin']);
         }
-               
+
 
     }
 
