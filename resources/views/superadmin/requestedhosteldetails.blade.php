@@ -20,7 +20,7 @@
 <section class="content-header">
   <h1>
   SuperAdmin/
-    <small>HAMNA</small>
+    <small>REQUESTED HOSTEL DETAILS</small>
 
   </h1>
   <br>
@@ -29,36 +29,17 @@
     <li><a href="#"><i class="fa fa-dashboard"></i> Level</a></li>
     <li class="active">Here</li>
   </ol>
-<table id="example" class="display" style="width:100%">
-            <thead>
-                <tr>
-                    <th>Hostel #</th>
-                    <th>Name</th>
-                    <th>HostelOwner</th>
-                    <th>Contact</th>
-                    <th>Description</th>
-                    <th></th>
-                    <th></th>
-                    <th></th>
-                </tr>
-            </thead>
-            <tbody>
-@foreach ($hosteldetails as $var)
-              <tr>
-                  <td>{{$var->id}} </td>
-                  <td>{{$var->hostelname}} </td>
-                  <td>{{$var->name}}</td>
-                  <td>{{$var->contactno}}</td>
-                  <td> {{$var->hostel_description}} </td>
-                  <td> <a class="editform" href="#"  > Edit</a></td>
-                  <td> <a class="deleteform" href="#"  > Block</a></td>
-                  <td> <a class="" href=""  > Details</a></td>
-              </tr>
-@endforeach
-          </tbody>
-          </table>
-          </section>
-          </div>
+<h1> {{$requestdetails->user->id}} </h1>
+<h1> {{$requestdetails->user->name}} </h1>
+<h1> {{$requestdetails->user->contactno}} </h1>
+
+
+
+
+
+
+
+
 @endsection
 
 @section('scripts')

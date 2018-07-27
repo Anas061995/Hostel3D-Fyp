@@ -22,3 +22,5 @@ Route::get('/registrationrequests', 'registrationrequestsController@index')->nam
 Route::get('/updaterequests', 'updaterequestsController@index')->name('superadmin.updaterequests');
 Route::post('/acceptrequest', 'registrationrequestsController@accept_req')->name('acceptrequest');
 Route::post('/rejectrequest', 'registrationrequestsController@reject_req')->name('rejectrequest');
+Route::post('/requestedhosteldetails', 'registrationrequestsController@index')->name('requestedhosteldetails');
+Route::post('/requestedhosteldetails', 'requestedhosteldetailsController@requested_details')->name('requestedhosteldetails');
