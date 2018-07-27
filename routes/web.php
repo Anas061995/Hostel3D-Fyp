@@ -13,17 +13,6 @@ Route::get('/superadmindashboard', 'superadmincontrollers\SuperadmindashboardCon
 Route::get('/hostels', 'superadmincontrollers\hostelController@index')->name('superadmin.hostels');
 Route::get('/hosteladmins', 'superadmincontrollers\hosteladminsController@index')->name('superadmin.hosteladmins');
 Route::get('/hostelspayment', 'hostelspaymentController@index')->name('superadmin.hostelspayment');
-Route::get('/hostelsresidents', 'hostelsresidentsController@index')->name('superadmin.hostelsresidents');
-Route::get('/reports', 'reportsController@index')->name('superadmin.reports');
-Route::get('/visitors', 'visitorsController@index')->name('superadmin.visitors');
-Route::get('/history', 'historyController@index')->name('superadmin.history');
-Route::get('/reviews', 'reviewsController@index')->name('superadmin.reviews');
-Route::get('/registrationrequests', 'registrationrequestsController@index')->name('superadmin.registrationrequests');
-Route::get('/updaterequests', 'updaterequestsController@index')->name('superadmin.updaterequests');
-Route::post('/acceptrequest', 'registrationrequestsController@accept_req')->name('acceptrequest');
-Route::post('/rejectrequest', 'registrationrequestsController@reject_req')->name('rejectrequest');
-Route::post('/requestedhosteldetails', 'registrationrequestsController@index')->name('requestedhosteldetails');
-Route::post('/requestedhosteldetails', 'requestedhosteldetailsController@requested_details')->name('requestedhosteldetails');
 Route::get('/hostelsresidents', 'superadmincontrollers\hostelsresidentsController@index')->name('superadmin.hostelsresidents');
 Route::get('/superreports', 'superadmincontrollers\reportsController@index')->name('superadmin.reports');
 Route::get('/visitors', 'superadmincontrollers\visitorsController@index')->name('superadmin.visitors');

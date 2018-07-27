@@ -47,27 +47,26 @@
 
            @foreach ($hosteldetails as $var)
            @if($var->user->haspermission('none'))
-              <tr>
+          
+              <tr>  
                  <td> {{$var->user->id}} </td>
                   <td>{{$var->hostelname}} </td>
-                  <td>  {{$var->user->name}} </td>
+                  <td>  {{$var->user->name}} </td> 
                   <td>   {{$var->user->contactno}}  </td>
                   <td> {{$var->hostel_description}} </td>
                   <td>   <button id ="{{$var->user->id}}" class="btn btn-block btn-primary" onclick="ShowModal(this)" > Respond To Request </button>
                  </td>
                   <td> <a class="deleteform" href="#"  > Block</a></td>
-                  <td> <a type="submit" class="btn btn-primary btn-xs "
-                  onclick="event.preventDefault(); document.getElementById('form_{{ $var->id }}').submit();"
-                  href="{{route('requestedhosteldetails', $var->id ) }}"> View Details</a>
-                  <form id="form_{{ $var->id }}" action="{{ route('requestedhosteldetails') }}" method="POST" style="display: none;">
-                      {{ csrf_field() }}
-                      <input type="hidden" name="requestdetails" value="{{$var->id}}" >
-                  </form></td>
-              </tr>
+                  <td> <a class="" href=""  > Details</a></td>
+              </tr> 
               @endif
-@endforeach
+@endforeach   
+
             </tbody>
+
           </table>
+          
+
   </section>
           </div>
 @endsection
@@ -102,12 +101,12 @@
      </div>
      </form>
 
-    </div>
+    </div>   
     </div>
   </div>
 </div>
 </div>
-
+   
 @endsection
 
 @section('scripts')

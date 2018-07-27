@@ -47,17 +47,6 @@
               <tr>
                   <td>{{$var->id}} </td>
                   <td>{{$var->hostelname}} </td>
-<<<<<<< HEAD
-                  <td>{{$var->name}}</td>
-                  <td>{{$var->contactno}}</td>
-                  <td> {{$var->hostel_description}} </td>
-                  <td> <a class="editform" href="#"  > Edit</a></td>
-                  <td> <a class="deleteform" href="#"  > Block</a></td>
-                  <td> <a class="" href=""  > Details</a></td>
-              </tr>
-@endforeach
-          </tbody>
-=======
                   <td>{{$var->user->name}} </td>
                   <td>   {{$var->user->contactno}}  </td>
                   <td> {{$var->hostel_description}} </td>
@@ -73,7 +62,6 @@
               </tr>
 @endforeach
             </tbody>
->>>>>>> 14bcb0a98f157900696220df04babd209f2c44d4
           </table>
           </section>
           </div>
