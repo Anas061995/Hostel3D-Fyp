@@ -20,7 +20,7 @@
 <section class="content-header">
   <h1>
   SuperAdmin/
-    <small>Hostels</small>
+    <small>REQUESTED HOSTEL DETAILS</small>
 
   </h1>
   <br>
@@ -29,54 +29,17 @@
     <li><a href="#"><i class="fa fa-dashboard"></i> Level</a></li>
     <li class="active">Here</li>
   </ol>
-<table id="example" class="display" style="width:100%">
-            <thead>
-                <tr>
-                    <th>Hostel Id</th>
-                    <th>Name</th>
-                    <th>HostelOwner</th>
-                    <th>Contact</th>
-                    <th>Description</th>
-                    <th></th>
-                    <th></th>
-                    <th></th>
-                </tr>
-            </thead>
-            <tbody>
-@foreach ($hosteldetails as $var)
-              <tr>
-                  <td>{{$var->id}} </td>
-                  <td>{{$var->hostelname}} </td>
-<<<<<<< HEAD
-                  <td>{{$var->name}}</td>
-                  <td>{{$var->contactno}}</td>
-                  <td> {{$var->hostel_description}} </td>
-                  <td> <a class="editform" href="#"  > Edit</a></td>
-                  <td> <a class="deleteform" href="#"  > Block</a></td>
-                  <td> <a class="" href=""  > Details</a></td>
-              </tr>
-@endforeach
-          </tbody>
-=======
-                  <td>{{$var->user->name}} </td>
-                  <td>   {{$var->user->contactno}}  </td>
-                  <td> {{$var->hostel_description}} </td>
-                  <td> <a class="editform" href="#"  > Edit</a></td>
-                  <td> <a class="deleteform" href="#"  > Block</a></td>
-                  <td> <a type="submit" class="btn btn-primary btn-xs "
-                  onclick="event.preventDefault(); document.getElementById('form_{{ $var->id }}').submit();"
-                  href="{{route('selectedhosteldetails' , $var->id ) }}"> View Details</a>
-                  <form id="form_{{ $var->id }}" action="{{ route('selectedhosteldetails') }}" method="POST" style="display: none;">
-                      {{ csrf_field() }}
-                      <input type="hidden" name="id" value="{{$var->id}}" >
-                  </form></td>
-              </tr>
-@endforeach
-            </tbody>
->>>>>>> 14bcb0a98f157900696220df04babd209f2c44d4
-          </table>
-          </section>
-          </div>
+<h1> {{$requestdetails->user->id}} </h1>
+<h1> {{$requestdetails->user->name}} </h1>
+<h1> {{$requestdetails->user->contactno}} </h1>
+
+
+
+
+
+
+
+
 @endsection
 
 @section('scripts')
