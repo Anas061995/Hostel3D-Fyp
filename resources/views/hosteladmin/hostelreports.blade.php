@@ -27,56 +27,9 @@
         <li><a href="#"><i class="fa fa-dashboard"></i> Level</a></li>
         <li class="active">Here</li>
       </ol>
-      <div class="box-body">
-                <div class="row" style="margin-left:280px;">
-                  <div class="col-md-8">
-                    <div class="form-group">
-                      <label>SELECT REPORT TYPE</label>
-                      <select class="form-control select2" style="width: 100%;">
-                        <option selected="selected">Staff</option>
-                        <option>Mess</option>
-                        <option>Finance</option>
-                      </select>
-                    </div>
-                    <div>
-                      <button type="button" class="btn btn-success" onclick="barchart">Generate Report</button>
-                    </div>
-                    <br></br>
-                    <div class="box box-success">
-            <div class="box-header with-border">
-              <h3 class="box-title">Bar Chart</h3>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
       <!-- Main content -->
   <section class="content">
-=======
-=======
->>>>>>> parent of 116bf12... Revert "Merge branch 'master' of https://github.com/Anas061995/Hostel3D-Fyp"
-=======
->>>>>>> parent of 116bf12... Revert "Merge branch 'master' of https://github.com/Anas061995/Hostel3D-Fyp"
-              <div class="box-tools pull-right">
-                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
-                </button>
-                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
-              </div>
-            </div>
-            <div class="box-body">
-              <div class="chart">
-                <canvas id="barChart" style="height:300px"></canvas>
-              </div>
-            </div>
-            <!-- /.box-body -->
-          </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> parent of 116bf12... Revert "Merge branch 'master' of https://github.com/Anas061995/Hostel3D-Fyp"
-=======
->>>>>>> parent of 116bf12... Revert "Merge branch 'master' of https://github.com/Anas061995/Hostel3D-Fyp"
-=======
->>>>>>> parent of 116bf12... Revert "Merge branch 'master' of https://github.com/Anas061995/Hostel3D-Fyp"
 
     <div style="margin-left:145px;">
       @foreach ($reportdetails as $var)
@@ -117,8 +70,6 @@
             </div>
             <!-- /.box-body -->
           </div>
-=======
->>>>>>> 116bf120c3fefbc956f2c9afd2737cbafd4ef0c9
 
     </section>
 
@@ -140,30 +91,9 @@
 <script src="{{asset('asset/js/components/bootstrap/dist/js/bootstrap.min.js')}}"></script>
 <!-- AdminLTE App -->
 <script src="{{asset('asset/js/adminlte.min.js')}}"></script>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 <script src="{{asset('asset/js/chart.js/Chart.js"></script>
 
-=======
->>>>>>> 116bf120c3fefbc956f2c9afd2737cbafd4ef0c9
-=======
-
-<script src="../asset/js/chart.js/Chart.js"></script>
-
->>>>>>> parent of 116bf12... Revert "Merge branch 'master' of https://github.com/Anas061995/Hostel3D-Fyp"
-=======
-
-<script src="../asset/js/chart.js/Chart.js"></script>
-
->>>>>>> parent of 116bf12... Revert "Merge branch 'master' of https://github.com/Anas061995/Hostel3D-Fyp"
-=======
-
-<script src="../asset/js/chart.js/Chart.js"></script>
-
->>>>>>> parent of 116bf12... Revert "Merge branch 'master' of https://github.com/Anas061995/Hostel3D-Fyp"
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBQ384eNh2btXKG7M__gzqPAOKoq6skHOY&callback=myMap"></script>
 
 <script type="text/javascript">

@@ -30,43 +30,15 @@
     <li class="active">Here</li>
   </ol>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 <table id="example" class="display" style="width:100%">
             <thead>
                 @foreach ($residentcomplaints as $var)
-=======
-<table id="example" class="display" style="width:100%">
-            <thead>
->>>>>>> parent of 116bf12... Revert "Merge branch 'master' of https://github.com/Anas061995/Hostel3D-Fyp"
-=======
-<table id="example" class="display" style="width:100%">
-            <thead>
->>>>>>> parent of 116bf12... Revert "Merge branch 'master' of https://github.com/Anas061995/Hostel3D-Fyp"
-=======
-<table id="example" class="display" style="width:100%">
-            <thead>
->>>>>>> parent of 116bf12... Revert "Merge branch 'master' of https://github.com/Anas061995/Hostel3D-Fyp"
                 <tr>
                     <th>Complaint id</th>
                     <th>Complaint By</th>
                     <th>Complaint Status</th>
                     <th>Complaint Type</th>
                     <th></th>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-                    <th></th>
->>>>>>> parent of 116bf12... Revert "Merge branch 'master' of https://github.com/Anas061995/Hostel3D-Fyp"
-=======
-                    <th></th>
->>>>>>> parent of 116bf12... Revert "Merge branch 'master' of https://github.com/Anas061995/Hostel3D-Fyp"
-=======
-                    <th></th>
->>>>>>> parent of 116bf12... Revert "Merge branch 'master' of https://github.com/Anas061995/Hostel3D-Fyp"
                 </tr>
             </thead>
             <tbody>
@@ -74,9 +46,6 @@
                 <td></td>
                 <td></td>
                 <td>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
                   <div class="col-md-6">
                     <button id ="{{$var->user->id}}" class="btn btn-block btn-primary" onclick="ShowModal(this)" > Change Status</button></div>
                 </td>
@@ -89,41 +58,13 @@
                       <input type="hidden" name="complaintdetails" value="{{$var->id}}" >
                   </form></td>
               </tr>
-=======
->>>>>>> 116bf120c3fefbc956f2c9afd2737cbafd4ef0c9
-=======
-=======
->>>>>>> parent of 116bf12... Revert "Merge branch 'master' of https://github.com/Anas061995/Hostel3D-Fyp"
-=======
->>>>>>> parent of 116bf12... Revert "Merge branch 'master' of https://github.com/Anas061995/Hostel3D-Fyp"
-                  <select class="form-control" style="width: 90%;">
-                    <option selected="selected">None</option>
-                    <option>Pending</option>
-                    <option>Completed</option>
-                  </select>
-                </td>
-                  <td></td>
-                  <td><a class="deleteform" href="#" >Respond</a></td>
-                  <td><a class="" href="" > Details</a></td>
-              </tr>
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> parent of 116bf12... Revert "Merge branch 'master' of https://github.com/Anas061995/Hostel3D-Fyp"
-=======
->>>>>>> parent of 116bf12... Revert "Merge branch 'master' of https://github.com/Anas061995/Hostel3D-Fyp"
-=======
->>>>>>> parent of 116bf12... Revert "Merge branch 'master' of https://github.com/Anas061995/Hostel3D-Fyp"
 
 
             </tbody>
 
           </table>
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
   </section>
           </div>
             @endforeach
@@ -165,33 +106,6 @@
 </div>
 </div>
 
-=======
-
-
-    </section>
-
-  </div>
-
-    @include('includes.footer')
-
-</div>
->>>>>>> 116bf120c3fefbc956f2c9afd2737cbafd4ef0c9
-=======
-  </section>
-          </div>
->>>>>>> parent of 116bf12... Revert "Merge branch 'master' of https://github.com/Anas061995/Hostel3D-Fyp"
-=======
-
-
-  </section>
-          </div>
->>>>>>> parent of 116bf12... Revert "Merge branch 'master' of https://github.com/Anas061995/Hostel3D-Fyp"
-=======
-
-
-  </section>
-          </div>
->>>>>>> parent of 116bf12... Revert "Merge branch 'master' of https://github.com/Anas061995/Hostel3D-Fyp"
 @endsection
 
 @section('scripts')
@@ -200,16 +114,6 @@
 <script src="{{asset('asset/bower_components/bootstrap/dist/js/bootstrap.min.js')}}"></script>
 <!-- AdminLTE App -->
 <script src="{{asset('asset/js/adminlte.min.js')}}"></script>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> parent of 116bf12... Revert "Merge branch 'master' of https://github.com/Anas061995/Hostel3D-Fyp"
-=======
->>>>>>> parent of 116bf12... Revert "Merge branch 'master' of https://github.com/Anas061995/Hostel3D-Fyp"
-=======
->>>>>>> parent of 116bf12... Revert "Merge branch 'master' of https://github.com/Anas061995/Hostel3D-Fyp"
 <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
 <script src="https://cdn.datatables.net/buttons/1.5.1/js/dataTables.buttons.min.js"></script>
@@ -243,9 +147,6 @@ $(document).ready(function() {
     } );
 } );
 </script>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 <script>
 function ShowModal(myid)
@@ -257,13 +158,4 @@ function ShowModal(myid)
 
 }
 </script>
-=======
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBQ384eNh2btXKG7M__gzqPAOKoq6skHOY&callback=myMap"></script>
->>>>>>> 116bf120c3fefbc956f2c9afd2737cbafd4ef0c9
-=======
->>>>>>> parent of 116bf12... Revert "Merge branch 'master' of https://github.com/Anas061995/Hostel3D-Fyp"
-=======
->>>>>>> parent of 116bf12... Revert "Merge branch 'master' of https://github.com/Anas061995/Hostel3D-Fyp"
-=======
->>>>>>> parent of 116bf12... Revert "Merge branch 'master' of https://github.com/Anas061995/Hostel3D-Fyp"
 @endsection
