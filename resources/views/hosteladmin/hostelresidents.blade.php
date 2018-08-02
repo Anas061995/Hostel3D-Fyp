@@ -8,6 +8,8 @@
   <!-- Theme style -->
   <link rel="stylesheet" href="{{asset('asset/css/AdminLTE.min.css')}}">
   <link rel="stylesheet" href="{{asset('asset/css/skins/skin-blue.min.css')}}">
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css">
+<link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.5.1/css/buttons.dataTables.min.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
 @endsection
 @section('content')
@@ -15,26 +17,32 @@
 @include('includes.hosteladminsidebar')
 <div class="content-wrapper">
 
-    <section class="content-header">
-      <h1>
-        Hostel Admin/
-        <small>Residents</small>
-      </h1>
-      <br>
-      <br>
+<section class="content-header">
+  <h1>
+  HostelAdmin/
+    <small>Residents</small>
 
-      <ol class="breadcrumb">
-        <li><a href="#"><i class="fa fa-dashboard"></i> Level</a></li>
-        <li class="active">Here</li>
-      </ol>
+  </h1>
+  <br>
+  <br>
+  <ol class="breadcrumb">
+    <li><a href="#"><i class="fa fa-dashboard"></i> Level</a></li>
+    <li class="active">Here</li>
+  </ol>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of 116bf12... Revert "Merge branch 'master' of https://github.com/Anas061995/Hostel3D-Fyp"
 <table id="example" class="display" style="width:100%">
             <thead>
                 <tr>
                     <th>Serial No</th>
                     <th>Resident Name</th>
+<<<<<<< HEAD
                     <th>Room No</th>
+=======
+>>>>>>> parent of 116bf12... Revert "Merge branch 'master' of https://github.com/Anas061995/Hostel3D-Fyp"
                     <th>Living Status</th>
                     <th>Mess Status</th>
                     <th></th>
@@ -42,6 +50,7 @@
                 </tr>
             </thead>
             <tbody>
+<<<<<<< HEAD
               @foreach ($residentdetails as $var)
               <tr>
                   <td></td>
@@ -95,24 +104,28 @@
 
       @endsection
 =======
-
-    
-
-
-    </section>
-
-    <!-- Main content -->
-    <section class="content container-fluid">
+=======
+>>>>>>> parent of 116bf12... Revert "Merge branch 'master' of https://github.com/Anas061995/Hostel3D-Fyp"
 
 
 
-    </section>
+              <tr>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td><a class="deleteform" href="#"  > Block</a></td>
+                  <td><a class="" href=""  > Details</a></td>
+              </tr>
 
-  </div>
 
-    @include('includes.footer')
+            </tbody>
 
-</div>
+          </table>
+
+
+  </section>
+          </div>
 @endsection
 >>>>>>> 116bf120c3fefbc956f2c9afd2737cbafd4ef0c9
 
@@ -123,6 +136,9 @@
 <!-- AdminLTE App -->
 <script src="{{asset('asset/js/adminlte.min.js')}}"></script>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of 116bf12... Revert "Merge branch 'master' of https://github.com/Anas061995/Hostel3D-Fyp"
 <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
 <script src="https://cdn.datatables.net/buttons/1.5.1/js/dataTables.buttons.min.js"></script>
@@ -171,12 +187,20 @@ function closeModel()
 function ShowModal(myid)
 {
  var id = $(myid).attr('id');
+<<<<<<< HEAD
  $("#block").val(id);
+=======
+ $("#acceptbutton").val(id);
+ $("#rejectbutton").val(id);
+>>>>>>> parent of 116bf12... Revert "Merge branch 'master' of https://github.com/Anas061995/Hostel3D-Fyp"
  $("#modalForm").show();
 
 }
 </script>
+<<<<<<< HEAD
 =======
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBQ384eNh2btXKG7M__gzqPAOKoq6skHOY&callback=myMap"></script>
 >>>>>>> 116bf120c3fefbc956f2c9afd2737cbafd4ef0c9
+=======
+>>>>>>> parent of 116bf12... Revert "Merge branch 'master' of https://github.com/Anas061995/Hostel3D-Fyp"
 @endsection
