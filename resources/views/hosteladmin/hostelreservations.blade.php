@@ -33,9 +33,14 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <table id="example" class="display" style="width:100%">
             <thead>
                 @foreach ($reservationdetails as $var)
+=======
+<table id="example" class="display" style="width:100%">
+            <thead>
+>>>>>>> parent of 116bf12... Revert "Merge branch 'master' of https://github.com/Anas061995/Hostel3D-Fyp"
 =======
 <table id="example" class="display" style="width:100%">
             <thead>
@@ -54,6 +59,7 @@
                 </tr>
             </thead>
             <tbody>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
               <tr>
@@ -83,6 +89,8 @@
       <div class="modal-header">
 =======
 >>>>>>> parent of 116bf12... Revert "Merge branch 'master' of https://github.com/Anas061995/Hostel3D-Fyp"
+=======
+>>>>>>> parent of 116bf12... Revert "Merge branch 'master' of https://github.com/Anas061995/Hostel3D-Fyp"
 
         <button type="button" class="close" onclick="closeModel()" id="closeadd"  aria-label="Close">
           <span aria-hidden="true">&times;</span>
@@ -100,6 +108,7 @@
      </div>
      </form>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
      <form role="form" method="POST" action="{{route('rejectrequest')}}" enctype="multipart/form-data">
           {{ csrf_field() }}
@@ -127,8 +136,23 @@
                   <td><a class="deleteform" href="#"  > Block</a></td>
                   <td><a class="" href=""  > Details</a></td>
               </tr>
+=======
+              <tr>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td><a class="deleteform" href="#"  > Block</a></td>
+                  <td><a class="" href=""  > Details</a></td>
+              </tr>
 
 
+            </tbody>
+>>>>>>> parent of 116bf12... Revert "Merge branch 'master' of https://github.com/Anas061995/Hostel3D-Fyp"
+
+          </table>
+
+<<<<<<< HEAD
             </tbody>
 >>>>>>> parent of 116bf12... Revert "Merge branch 'master' of https://github.com/Anas061995/Hostel3D-Fyp"
 
@@ -153,6 +177,9 @@
 
 =======
 >>>>>>> parent of 116bf12... Revert "Merge branch 'master' of https://github.com/Anas061995/Hostel3D-Fyp"
+=======
+
+>>>>>>> parent of 116bf12... Revert "Merge branch 'master' of https://github.com/Anas061995/Hostel3D-Fyp"
   </section>
           </div>
 @endsection
@@ -168,6 +195,9 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of 116bf12... Revert "Merge branch 'master' of https://github.com/Anas061995/Hostel3D-Fyp"
 =======
 >>>>>>> parent of 116bf12... Revert "Merge branch 'master' of https://github.com/Anas061995/Hostel3D-Fyp"
 =======
@@ -207,6 +237,7 @@ $(document).ready(function() {
 </script>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <script type="text/javascript">
 function closeModel()
@@ -229,6 +260,8 @@ function ShowModal(myid)
 =======
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBQ384eNh2btXKG7M__gzqPAOKoq6skHOY&callback=myMap"></script>
 >>>>>>> 116bf120c3fefbc956f2c9afd2737cbafd4ef0c9
+=======
+>>>>>>> parent of 116bf12... Revert "Merge branch 'master' of https://github.com/Anas061995/Hostel3D-Fyp"
 =======
 >>>>>>> parent of 116bf12... Revert "Merge branch 'master' of https://github.com/Anas061995/Hostel3D-Fyp"
 =======

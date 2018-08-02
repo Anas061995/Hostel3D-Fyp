@@ -49,9 +49,12 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       <!-- Main content -->
   <section class="content">
 =======
+=======
+>>>>>>> parent of 116bf12... Revert "Merge branch 'master' of https://github.com/Anas061995/Hostel3D-Fyp"
 =======
 >>>>>>> parent of 116bf12... Revert "Merge branch 'master' of https://github.com/Anas061995/Hostel3D-Fyp"
               <div class="box-tools pull-right">
@@ -68,6 +71,9 @@
             <!-- /.box-body -->
           </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> parent of 116bf12... Revert "Merge branch 'master' of https://github.com/Anas061995/Hostel3D-Fyp"
+=======
 >>>>>>> parent of 116bf12... Revert "Merge branch 'master' of https://github.com/Anas061995/Hostel3D-Fyp"
 =======
 >>>>>>> parent of 116bf12... Revert "Merge branch 'master' of https://github.com/Anas061995/Hostel3D-Fyp"
@@ -137,11 +143,17 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <script src="{{asset('asset/js/chart.js/Chart.js"></script>
 
 =======
 >>>>>>> 116bf120c3fefbc956f2c9afd2737cbafd4ef0c9
+=======
+
+<script src="../asset/js/chart.js/Chart.js"></script>
+
+>>>>>>> parent of 116bf12... Revert "Merge branch 'master' of https://github.com/Anas061995/Hostel3D-Fyp"
 =======
 
 <script src="../asset/js/chart.js/Chart.js"></script>
