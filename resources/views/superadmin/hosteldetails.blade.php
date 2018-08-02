@@ -19,7 +19,7 @@
 
 <section class="content-header">
   <h1>
-  SuperAdmin/
+  Hostel/
     <small>HostelDetails</small>
 
   </h1>
