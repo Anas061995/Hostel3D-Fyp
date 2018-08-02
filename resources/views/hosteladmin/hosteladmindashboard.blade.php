@@ -27,8 +27,8 @@
         <li><a href="#"><i class="fa fa-dashboard"></i> Level</a></li>
         <li class="active">Here</li>
       </ol>
-
-
+</section>
+    <section class="content container-fluid">
       <div class="row">
         <div class="col-lg-3 col-xs-6">
           <!-- small box -->
@@ -95,12 +95,8 @@
 
     </section>
 
-    <!-- Main content -->
-    <section class="content container-fluid">
 
 
-
-    </section>
 
   </div>
 

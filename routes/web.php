@@ -27,7 +27,6 @@ Route::post('/requestedhosteldetails', 'requestedhosteldetailsController@request
 //Routes for HOSTEL ADMIN
 
 Route::get('/hosteladmindashboard', 'hosteladmincontrollers\hosteladmindashboardController@index')->name('hosteladmin.hosteladmindashboard');
-Route::get('/staff', 'hosteladmincontrollers\staffController@index')->name('hosteladmin.staff');
 Route::get('/rooms', 'hosteladmincontrollers\roomsController@index')->name('hosteladmin.rooms');
 Route::get('/hostelreviews', 'hosteladmincontrollers\reviewsController@index')->name('hosteladmin.reviews');
 Route::get('/hostelreports', 'hosteladmincontrollers\reportsController@index')->name('hosteladmin.reports');
@@ -38,6 +37,7 @@ Route::get('/residents', 'hosteladmincontrollers\residentController@index')->nam
 Route::get('/finance', 'hosteladmincontrollers\financeController@index')->name('hosteladmin.finance');
 Route::get('/reservations', 'hosteladmincontrollers\reservationController@index')->name('hosteladmin.reservations');
 Route::get('/mess', 'hosteladmincontrollers\messController@index')->name('hosteladmin.mess');
+<<<<<<< HEAD
 Route::post('/requestedresidentdetails', 'hosteladmincontrollers\requestedresidentdetailsController@index')->name('requestedresidentdetails');
 Route::post('/block', 'hosteladmincontrollers\requestedresidentdetailsController@block')->name('block');
 Route::post('/requestedreservationdetails', 'hosteladmincontrollers\requestedreservationdetailsController@index')->name('requestedreservationdetails');
@@ -46,3 +46,8 @@ Route::post('/completed', 'hosteladmincontrollers\complaintsController@completed
 Route::post('/requestedresidentcomplaint', 'hosteladmincontrollers\requestedresidentcomplaintsController@index')->name('requestedresidentcomplaints');
 Route::post('/generatemessreport', 'hosteladmincontrollers\requestedmessreportController@index')->name('generatemessreport');
 Route::post('/generatefoodreport', 'hosteladmincontrollers\requestedfoodreportController@index')->name('generatefoodreport');
+=======
+Route::get('/foodlist', 'hosteladmincontrollers\foodlistController@index')->name('hosteladmin.foodlist');
+Route::get('/messmenus', 'hosteladmincontrollers\messmenusController@index')->name('hosteladmin.messmenus');
+Route::get('/selectedroomdetails', 'hosteladmincontrollers\roomsController@selectedroom')->name('hosteladmin.selectedroomdetails');
+>>>>>>> 116bf120c3fefbc956f2c9afd2737cbafd4ef0c9

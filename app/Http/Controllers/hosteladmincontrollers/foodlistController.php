@@ -3,7 +3,8 @@
 namespace App\Http\Controllers\hosteladmincontrollers;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-class roomsController extends Controller
+
+class foodlistController extends Controller
 {
     /**
      * Create a new controller instance.
@@ -14,6 +15,7 @@ class roomsController extends Controller
     {
         $this->middleware('auth');
     }
+
     /**
      * Show the application dashboard.
      *
@@ -21,11 +23,6 @@ class roomsController extends Controller
      */
     public function index()
     {
-        return view('hosteladmin.hostelrooms');
-    }
-
-    public function selectedroom()
-    {
-        return view('hosteladmin.hostelroomdetails');
+        return view('hosteladmin.hostelfoodlist');
     }
 }

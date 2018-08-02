@@ -4,7 +4,7 @@ namespace App\Http\Controllers\hosteladmincontrollers;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class staffController extends Controller
+class messmenusController extends Controller
 {
     /**
      * Create a new controller instance.
@@ -23,6 +23,6 @@ class staffController extends Controller
      */
     public function index()
     {
-        return view('hosteladmin.hostelstaff');
+        return view('hosteladmin.hostelmessmenus');
     }
 }

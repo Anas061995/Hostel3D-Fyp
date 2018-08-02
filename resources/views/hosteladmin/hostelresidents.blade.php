@@ -8,8 +8,6 @@
   <!-- Theme style -->
   <link rel="stylesheet" href="{{asset('asset/css/AdminLTE.min.css')}}">
   <link rel="stylesheet" href="{{asset('asset/css/skins/skin-blue.min.css')}}">
-  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css">
-<link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.5.1/css/buttons.dataTables.min.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
 @endsection
 @section('content')
@@ -17,19 +15,20 @@
 @include('includes.hosteladminsidebar')
 <div class="content-wrapper">
 
-<section class="content-header">
-  <h1>
-  HostelAdmin/
-    <small>Residents</small>
+    <section class="content-header">
+      <h1>
+        Hostel Admin/
+        <small>Residents</small>
+      </h1>
+      <br>
+      <br>
 
-  </h1>
-  <br>
-  <br>
-  <ol class="breadcrumb">
-    <li><a href="#"><i class="fa fa-dashboard"></i> Level</a></li>
-    <li class="active">Here</li>
-  </ol>
+      <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-dashboard"></i> Level</a></li>
+        <li class="active">Here</li>
+      </ol>
 
+<<<<<<< HEAD
 <table id="example" class="display" style="width:100%">
             <thead>
                 <tr>
@@ -95,6 +94,27 @@
  </div>
 
       @endsection
+=======
+
+    
+
+
+    </section>
+
+    <!-- Main content -->
+    <section class="content container-fluid">
+
+
+
+    </section>
+
+  </div>
+
+    @include('includes.footer')
+
+</div>
+@endsection
+>>>>>>> 116bf120c3fefbc956f2c9afd2737cbafd4ef0c9
 
 @section('scripts')
 <script src="{{asset('asset/bower_components/jquery/dist/jquery.min.js')}}"></script>
@@ -102,6 +122,7 @@
 <script src="{{asset('asset/bower_components/bootstrap/dist/js/bootstrap.min.js')}}"></script>
 <!-- AdminLTE App -->
 <script src="{{asset('asset/js/adminlte.min.js')}}"></script>
+<<<<<<< HEAD
 <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
 <script src="https://cdn.datatables.net/buttons/1.5.1/js/dataTables.buttons.min.js"></script>
@@ -155,4 +176,7 @@ function ShowModal(myid)
 
 }
 </script>
+=======
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBQ384eNh2btXKG7M__gzqPAOKoq6skHOY&callback=myMap"></script>
+>>>>>>> 116bf120c3fefbc956f2c9afd2737cbafd4ef0c9
 @endsection
