@@ -23,7 +23,7 @@ Route::get('/updaterequests', 'superadmincontrollers\updaterequestsController@in
 Route::post('/acceptrequest', 'superadmincontrollers\registrationrequestsController@accept_req')->name('acceptrequest');
 Route::post('/rejectrequest', 'superadmincontrollers\registrationrequestsController@reject_req')->name('rejectrequest');
 Route::post('/selectedhosteldetails', 'superadmincontrollers\hostelController@selected_details')->name('selectedhosteldetails');
-
+Route::post('/requestedhosteldetails', 'requestedhosteldetailsController@requested_details')->name('requestedhosteldetails');
 //Routes for HOSTEL ADMIN
 
 Route::get('/hosteladmindashboard', 'hosteladmincontrollers\hosteladmindashboardController@index')->name('hosteladmin.hosteladmindashboard');
@@ -38,3 +38,11 @@ Route::get('/residents', 'hosteladmincontrollers\residentController@index')->nam
 Route::get('/finance', 'hosteladmincontrollers\financeController@index')->name('hosteladmin.finance');
 Route::get('/reservations', 'hosteladmincontrollers\reservationController@index')->name('hosteladmin.reservations');
 Route::get('/mess', 'hosteladmincontrollers\messController@index')->name('hosteladmin.mess');
+Route::post('/requestedresidentdetails', 'hosteladmincontrollers\requestedresidentdetailsController@index')->name('requestedresidentdetails');
+Route::post('/block', 'hosteladmincontrollers\requestedresidentdetailsController@block')->name('block');
+Route::post('/requestedreservationdetails', 'hosteladmincontrollers\requestedreservationdetailsController@index')->name('requestedreservationdetails');
+Route::post('/pending', 'hosteladmincontrollers\complaintsController@pending')->name('pending');
+Route::post('/completed', 'hosteladmincontrollers\complaintsController@completed')->name('completed');
+Route::post('/requestedresidentcomplaint', 'hosteladmincontrollers\requestedresidentcomplaintsController@index')->name('requestedresidentcomplaints');
+Route::post('/generatemessreport', 'hosteladmincontrollers\requestedmessreportController@index')->name('generatemessreport');
+Route::post('/generatefoodreport', 'hosteladmincontrollers\requestedfoodreportController@index')->name('generatefoodreport');

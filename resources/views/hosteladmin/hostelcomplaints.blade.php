@@ -32,12 +32,12 @@
 
 <table id="example" class="display" style="width:100%">
             <thead>
+                @foreach ($residentcomplaints as $var)
                 <tr>
                     <th>Complaint id</th>
                     <th>Complaint By</th>
                     <th>Complaint Status</th>
                     <th>Complaint Type</th>
-                    <th></th>
                     <th></th>
                 </tr>
             </thead>
@@ -46,15 +46,17 @@
                 <td></td>
                 <td></td>
                 <td>
-                  <select class="form-control" style="width: 90%;">
-                    <option selected="selected">None</option>
-                    <option>Pending</option>
-                    <option>Completed</option>
-                  </select>
+                  <div class="col-md-6">
+                    <button id ="{{$var->user->id}}" class="btn btn-block btn-primary" onclick="ShowModal(this)" > Change Status</button></div>
                 </td>
                   <td></td>
-                  <td><a class="deleteform" href="#" >Respond</a></td>
-                  <td><a class="" href="" > Details</a></td>
+                  <td><a type="submit" class="btn btn-primary btn-xs "
+                  onclick="event.preventDefault(); document.getElementById('form_{{ $var->id }}').submit();"
+                  href="{{route('requestedresidentcomplaints' , $var->id )}}"> View Details</a>
+                  <form id="form_{{ $var->id }}" action="{{ route('requestedresidentcomplaints') }}" method="POST" style="display: none;">
+                      {{ csrf_field() }}
+                      <input type="hidden" name="complaintdetails" value="{{$var->id}}" >
+                  </form></td>
               </tr>
 
 
@@ -65,6 +67,45 @@
 
   </section>
           </div>
+            @endforeach
+@endsection
+@section('modal')
+<div class="modal" id ="modalForm" >
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+
+        <button type="button" class="close" onclick="closeModel()" id="closeadd"  aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <h3 class="modal-title" style="text-align: center;">Change Status</h3>
+      </div>
+<div class="modal-body">
+
+    <form role="form" method="POST" action="{{route('completed')}}" enctype="multipart/form-data">
+          {{ csrf_field() }}
+          <input type="hidden" value="" id="completed" name="id"/>
+          <div class="row">
+<div class="col-md-6">
+<input type="submit" class="btn btn-success form-control" value="COMPLETED" >
+     </div>
+     </form>
+
+     <form role="form" method="POST" action="{{route('pending')}}" enctype="multipart/form-data">
+          {{ csrf_field() }}
+          <input type="hidden" value="" id="pending" name="id"/>
+     <div class="col-md-6">
+<input type="submit" class="btn btn-danger form-control" value="PENDING" >
+
+     </div>
+     </form>
+
+    </div>
+    </div>
+  </div>
+</div>
+</div>
+
 @endsection
 
 @section('scripts')
@@ -105,5 +146,16 @@ $(document).ready(function() {
         ]
     } );
 } );
+</script>
+
+<script>
+function ShowModal(myid)
+{
+ var id = $(myid).attr('id');
+ $("#pending").val(id);
+ $("#completed").val(id);
+ $("#modalForm").show();
+
+}
 </script>
 @endsection

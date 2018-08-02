@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers\hosteladmincontrollers;
 use App\Http\Controllers\Controller;
+
 use Illuminate\Http\Request;
 
-class complaintsController extends Controller
+use DB;
+class requestedresidentcomplaintsController extends Controller
 {
     /**
      * Create a new controller instance.
@@ -23,29 +25,22 @@ class complaintsController extends Controller
      */
     public function index()
     {
-      {
         $user = \Auth::user();
         if ($user->hasRole('hosteladmin'))
         {
                 $residentcomplaints = \App\Models\Hostel::all();
-                    return view('hosteladmin.hostelcomplaints',['residentcomplaints'=>$residentcomplaints]);
+                    return view('hosteladmin.requestedresidentcomplaints',['residentcomplaints'=>$residentcomplaints]);
             }
         else
         {
-            return redirect()->route('welcome')->with(['message' => 'You are not hostel admin']);
+            return redirect()->route('welcome')->with(['message' => 'You are not super admin']);
         }
-  }
+    }
+
+    public function resident_details(Request $request)
+    {
+      return view('hosteladmin.requestedresidentcomplaints',['residentcomplaints'=>$residentcomplaints]);
+
+    }
+
 }
-public function completed(Request $request)
-{
-$var_id= $request->id;
-$user = \App\User::where('id', $var_id)->first();
-$user->syncPermissions('hostels');
-return redirect()->back()->with(['message'=> 'Status has been successfully changed']);
-}
-  public function pending(Request $request)
-  {
-  $var_id= $request->id;
-  dd($var_id);
-  }
-  }

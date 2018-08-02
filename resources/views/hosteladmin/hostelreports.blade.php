@@ -27,56 +27,63 @@
         <li><a href="#"><i class="fa fa-dashboard"></i> Level</a></li>
         <li class="active">Here</li>
       </ol>
-      <div class="box-body">
-                <div class="row" style="margin-left:280px;">
-                  <div class="col-md-8">
-                    <div class="form-group">
-                      <label>SELECT REPORT TYPE</label>
-                      <select class="form-control select2" style="width: 100%;">
-                        <option selected="selected">Staff</option>
-                        <option>Mess</option>
-                        <option>Finance</option>
-                      </select>
-                    </div>
-                    <div>
-                      <button type="button" class="btn btn-success" onclick="barchart">Generate Report</button>
-                    </div>
-                    <br></br>
-                    <div class="box box-success">
-            <div class="box-header with-border">
-              <h3 class="box-title">Bar Chart</h3>
 
-              <div class="box-tools pull-right">
-                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
-                </button>
-                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
-              </div>
-            </div>
-            <div class="box-body">
-              <div class="chart">
-                <canvas id="barChart" style="height:300px"></canvas>
-              </div>
+      <!-- Main content -->
+  <section class="content">
+
+    <div style="margin-left:145px;">
+      @foreach ($reportdetails as $var)
+      <div class="col-md-5">
+        <!-- Profile Image -->
+        <div class="box box-primary">
+          <div class="box-body box-profile">
+            <img class="profile-user-img img-responsive img-circle" src="../../asset/img/photo3.jpg" alt="Mess picture">
+            <br>
+            </br>
+            <h3 class="profile-username text-center">Mess Report</h3>
+            <p class="text-muted text-center">Mess Menus</p>
+
+            <center><a type="submit" class="btn btn-primary btn-xs "
+            onclick="event.preventDefault(); document.getElementById('form_{{ $var->id }}').submit();"
+            href="{{route('generatemessreport' , $var->id )}}"> Generate Mess Report</a></center>
+            <form id="form_{{ $var->id }}" action="{{ route('generatemessreport') }}" method="POST" style="display: none;">
+                {{ csrf_field() }}
+                <input type="hidden" name="complaintdetails" value="{{$var->id}}" >
+            </form>
+          </div>
+          <!-- /.box-body -->
+        </div>
+      </div>
+        <!-- /.box -->
+
+        <div class="col-md-5">
+          <!-- Profile Image -->
+          <div class="box box-primary">
+            <div class="box-body box-profile">
+
+              <img class="profile-user-img img-responsive img-circle" src="../../asset/img/photo3.jpg" alt="Finance picture">
+              <br>
+              </br>
+              <h3 class="profile-username text-center">Finance Report</h3>
+              <p class="text-muted text-center">Financial </p>
+              <center><a type="submit" class="btn btn-primary btn-xs">Generate Finance Report</a></center>
             </div>
             <!-- /.box-body -->
           </div>
-
-
 
     </section>
 
     <!-- Main content -->
     <section class="content container-fluid">
 
-
-
     </section>
 
   </div>
-
-    @include('includes.footer')
-
+@include('includes.footer')
 </div>
+@endforeach
 @endsection
+
 
 @section('scripts')
 <script src="{{asset('asset/js/components/jquery/dist/jquery.min.js')}}"></script>
@@ -85,7 +92,7 @@
 <!-- AdminLTE App -->
 <script src="{{asset('asset/js/adminlte.min.js')}}"></script>
 
-<script src="../asset/js/chart.js/Chart.js"></script>
+<script src="{{asset('asset/js/chart.js/Chart.js"></script>
 
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBQ384eNh2btXKG7M__gzqPAOKoq6skHOY&callback=myMap"></script>
 

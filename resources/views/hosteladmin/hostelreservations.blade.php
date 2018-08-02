@@ -32,6 +32,7 @@
 
 <table id="example" class="display" style="width:100%">
             <thead>
+                @foreach ($reservationdetails as $var)
                 <tr>
                     <th>Reservation Id</th>
                     <th>Room Id</th>
@@ -42,28 +43,64 @@
                 </tr>
             </thead>
             <tbody>
-
-
-
               <tr>
                   <td></td>
                   <td></td>
                   <td></td>
                   <td></td>
-                  <td><a class="deleteform" href="#"  > Block</a></td>
-                  <td><a class="" href=""  > Details</a></td>
+                  <td><div class="col-md-7"><button id ="{{$var->user->id}}" class="btn btn-block btn-primary" onclick="ShowModal(this)"> Respond To Request </button></div></td>
+                  <td><a type="submit" class="btn btn-primary btn-xs "
+                  onclick="event.preventDefault(); document.getElementById('form_{{ $var->id }}').submit();"
+                  href="{{route('requestedreservationdetails' , $var->id )}}"> View Details</a>
+                  <form id="form_{{ $var->id }}" action="{{ route('requestedreservationdetails') }}" method="POST" style="display: none;">
+                      {{ csrf_field() }}
+                      <input type="hidden" name="reservationdetails" value="{{$var->id}}" >
+                  </form></td>
               </tr>
-
-
             </tbody>
-
           </table>
-
-
-  </section>
-          </div>
+        </section>
+      </div>
+      @endforeach
 @endsection
+@section('modal')
+<div class="modal" id ="modalForm" >
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
 
+        <button type="button" class="close" onclick="closeModel()" id="closeadd"  aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <h3 class="modal-title" style="text-align: center;">Respond To Request</h3>
+      </div>
+<div class="modal-body">
+
+    <form role="form" method="POST" action="{{route('acceptrequest')}}" enctype="multipart/form-data">
+          {{ csrf_field() }}
+          <input type="hidden" value="" id="acceptbutton" name="id"/>
+          <div class="row">
+<div class="col-md-6">
+<input type="submit" class="btn btn-success form-control" value="ACCEPT" >
+     </div>
+     </form>
+
+     <form role="form" method="POST" action="{{route('rejectrequest')}}" enctype="multipart/form-data">
+          {{ csrf_field() }}
+          <input type="hidden" value="" id="rejectbutton" name="id"/>
+     <div class="col-md-6">
+<input type="submit" class="btn btn-danger form-control" value="REJECT" >
+
+     </div>
+     </form>
+
+    </div>
+    </div>
+  </div>
+</div>
+</div>
+
+@endsection
 @section('scripts')
 <script src="{{asset('asset/bower_components/jquery/dist/jquery.min.js')}}"></script>
 <!-- Bootstrap 3.3.7 -->
@@ -102,5 +139,24 @@ $(document).ready(function() {
         ]
     } );
 } );
+</script>
+
+<script type="text/javascript">
+function closeModel()
+{
+            $('#modalForm').hide();
+            $(document.body).removeClass("modal-open");
+  $(".modal-backdrop").remove();
+        }
+</script>
+<script>
+function ShowModal(myid)
+{
+ var id = $(myid).attr('id');
+ $("#rejectbutton").val(id);
+ $("#accetbutton").val(id);
+ $("#modalForm").show();
+
+}
 </script>
 @endsection

@@ -23,6 +23,20 @@ class reservationController extends Controller
      */
     public function index()
     {
-        return view('hosteladmin.hostelreservations');
-    }
+      $user = \Auth::user();
+      if ($user->hasRole('hosteladmin'))
+      {
+              $reservationdetails = \App\Models\Hostel::all();
+                  return view('hosteladmin.hostelreservations',['reservationdetails'=>$reservationdetails]);
+          }
+      else
+      {
+          return redirect()->route('welcome')->with(['message' => 'You are not hostel admin']);
+      }
+}
+public function reject_req(Request $request)
+{
+$var_id= $request->id;
+dd($var_id);
+}
 }

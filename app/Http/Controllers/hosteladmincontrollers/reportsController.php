@@ -23,6 +23,15 @@ class reportsController extends Controller
      */
     public function index()
     {
-        return view('hosteladmin.hostelreports');
-    }
+      $user = \Auth::user();
+      if ($user->hasRole('hosteladmin'))
+      {
+              $reportdetails = \App\Models\Hostel::all();
+                  return view('hosteladmin.hostelreports',['reportdetails'=>$reportdetails]);
+          }
+      else
+      {
+          return redirect()->route('welcome')->with(['message' => 'You are not hostel admin']);
+      }
+}
 }

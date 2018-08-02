@@ -35,6 +35,7 @@
                 <tr>
                     <th>Serial No</th>
                     <th>Resident Name</th>
+                    <th>Room No</th>
                     <th>Living Status</th>
                     <th>Mess Status</th>
                     <th></th>
@@ -42,27 +43,58 @@
                 </tr>
             </thead>
             <tbody>
-
-
-
+              @foreach ($residentdetails as $var)
               <tr>
                   <td></td>
                   <td></td>
                   <td></td>
                   <td></td>
-                  <td><a class="deleteform" href="#"  > Block</a></td>
-                  <td><a class="" href=""  > Details</a></td>
+                  <td></td>
+                  <td><button id ="{{$var->user->id}}" class="btn btn-block btn-warning" onclick="ShowModal(this)" >Block</button></td>
+                  <td> <a type="submit" class="btn btn-primary btn-xs "
+                  onclick="event.preventDefault(); document.getElementById('form_{{ $var->id }}').submit();"
+                  href="{{route('requestedresidentdetails' , $var->id )}}"> View Details</a>
+                  <form id="form_{{ $var->id }}" action="{{ route('requestedresidentdetails') }}" method="POST" style="display: none;">
+                      {{ csrf_field() }}
+                      <input type="hidden" name="residentdetails" value="{{$var->id}}" >
+                  </form></td>
               </tr>
-
-
             </tbody>
-
           </table>
+        </section>
+      </div>
+      @endforeach
+      @endsection
 
+      @section('modal')
+      <div class="modal" id ="modalForm" >
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
 
-  </section>
-          </div>
-@endsection
+              <button type="button" class="close" onclick="closeModel()" id="closeadd"  aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+              <h3 class="modal-title" style="text-align: center;"> Are you sure want to block?</h3>
+            </div>
+      <div class="modal-body">
+
+        <form role="form" method="POST" action="{{route('block')}}" enctype="multipart/form-data">
+             {{ csrf_field() }}
+             <input type="hidden" value="" id="block" name="id"/>
+        <div class="row-md-1">
+   <input type="submit" class="btn btn-danger form-control" value="Yes" >
+
+        </div>
+        </form>
+
+       </div>
+       </div>
+     </div>
+   </div>
+ </div>
+
+      @endsection
 
 @section('scripts')
 <script src="{{asset('asset/bower_components/jquery/dist/jquery.min.js')}}"></script>
@@ -118,8 +150,7 @@ function closeModel()
 function ShowModal(myid)
 {
  var id = $(myid).attr('id');
- $("#acceptbutton").val(id);
- $("#rejectbutton").val(id);
+ $("#block").val(id);
  $("#modalForm").show();
 
 }
