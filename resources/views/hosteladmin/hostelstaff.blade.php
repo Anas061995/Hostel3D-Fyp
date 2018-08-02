@@ -18,7 +18,7 @@
     <section class="content-header">
       <h1>
         Hostel Admin/
-        <small>Rooms</small>
+        <small>Staff</small>
       </h1>
       <br>
       <br>

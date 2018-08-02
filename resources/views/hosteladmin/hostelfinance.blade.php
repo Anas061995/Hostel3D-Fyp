@@ -27,104 +27,25 @@
         <li><a href="#"><i class="fa fa-dashboard"></i> Level</a></li>
         <li class="active">Here</li>
       </ol>
+
+
+
+
+
     </section>
 
     <!-- Main content -->
     <section class="content container-fluid">
-  <div class="row" style="padding-left: 86px;  margin-top: -4px;" >
-    <div class=" col-md-3">
-      <!-- small box -->
-      <div class="small-box" style="background-color: #80858c !important; color:white;">
-        <div class="inner">
-          <h3>53<sup style="font-size: 20px">%</sup></h3>
 
-          <p>Dues</p>
-        </div>
-        <div class="icon">
-        <img src="{{asset('asset/img/due.png')}}"> </img>
-        </div>
-        <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
-      </div>
-    </div>
 
-    <div class="col-md-3 col-md-offset-1">
-      <!-- small box -->
-      <div class="small-box bg-blue">
-        <div class="inner">
-          <h3>53<sup style="font-size: 20px">%</sup></h3>
-          <p>Income</p>
-        </div>
-        <div class="icon">
-      <img src="{{asset('asset/img/income.png')}}"> </img>
-        </div>
-        <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
-      </div>
-    </div>
 
-    <div class="col-md-3 col-md-offset-1">
-      <!-- small box -->
-      <div class="small-box bg-red">
-        <div class="inner">
-          <h3>53<sup style="font-size: 20px">%</sup></h3>
-          <p>Expenses</p>
-        </div>
-        <div class="icon">
-        <img src="{{asset('asset/img/expense.png')}}"> </img>
-        </div>
-        <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
-      </div>
-    </div>
-  </div>
-  <br>
-  <div class= "row" style="padding-left: 86px;">
-    <div class="col-md-3">
-      <!-- small box -->
-      <div class="small-box bg-yellow">
-        <div class="inner">
-          <h3>53<sup style="font-size: 20px">%</sup></h3>
-          <p>Resident Dues</p>
-        </div>
-        <div class="icon">
-    <img src="{{asset('asset/img/coins.png')}}"> </img>
-        </div>
-        <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
-      </div>
-    </div>
-
-    <div class="col-md-3 col-md-offset-1">
-      <!-- small box -->
-      <div class="small-box bg-green">
-        <div class="inner">
-          <h3>53<sup style="font-size: 20px">%</sup></h3>
-          <p> Revenue</p>
-        </div>
-        <div class="icon">
-            <img src="{{asset('asset/img/revenue.png')}}"> </img>
-        </div>
-        <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
-      </div>
-    </div>
-
-    <div class="col-md-3 col-md-offset-1">
-      <!-- small box -->
-      <div class="small-box" style="background-color: #a09b5b !important; color:white;">
-        <div class="inner">
-          <h3>53<sup style="font-size: 20px">%</sup></h3>
-          <p>Mess Payments</p>
-        </div>
-        <div class="icon">
-            <img src="{{asset('asset/img/mess.png')}}"> </img>
-        </div>
-        <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
-      </div>
-    </div>
-
-  </div>
     </section>
 
   </div>
 
     @include('includes.footer')
+
+</div>
 @endsection
 
 @section('scripts')

@@ -27,6 +27,16 @@
     <!--      <span class="label label-warning">10</span> -->
         </a>
         </li>
+  <!--     
+      <!-- Tasks Menu -->
+      <!-- <li class="dropdown tasks-menu">
+        <!-- Menu Toggle Button -->
+        <!-- <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+          <i class="fa fa-flag-o"></i> -->
+        <!--  <span class="label label-danger">9</span> -->
+       <!--  </a>
+      </li> -->
+  -->
       <li class="dropdown user user-menu">
         <!-- Menu Toggle Button -->
         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
@@ -46,7 +56,7 @@
               <a href="#" class="btn btn-default btn-flat">Profile</a>
             </div>
             <div class="">
-
+           
             </div>
           </li>
         </ul>
