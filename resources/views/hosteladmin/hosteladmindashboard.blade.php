@@ -39,9 +39,9 @@
               <p>My Residents</p>
             </div>
             <div class="icon">
-              <i class="ion ion-bag"></i>
+              <img src="{{asset('asset/img/team.png')}}"> </img>
             </div>
-            <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+            <a href="{{route('hosteladmin.residents')}}" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
           </div>
         </div>
         <!-- ./col -->
@@ -54,7 +54,7 @@
               <p>Hostel Income</p>
             </div>
             <div class="icon">
-              <i class="fa fa-money"></i>
+              <img src="{{asset('asset/img/income.png')}}"> </img>
             </div>
             <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
           </div>
@@ -66,12 +66,12 @@
             <div class="inner">
               <h3>44</h3>
 
-              <p>User Registrations</p>
+              <p>Reservations </p>
             </div>
             <div class="icon">
-              <i class="ion ion-person-add"></i>
+                <img src="{{asset('asset/img/reserved.png')}}"> </img>
             </div>
-            <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+            <a href="{{route('hosteladmin.reservations')}}" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
           </div>
         </div>
         <!-- ./col -->
@@ -84,9 +84,9 @@
               <p>Reviews</p>
             </div>
             <div class="icon">
-              <i class="ion ion-pie-graph"></i>
+              <img src="{{asset('asset/img/rating.png')}}"> </img>
             </div>
-            <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+            <a href="{{route('hosteladmin.reviews')}}" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
           </div>
         </div>
         <!-- ./col -->

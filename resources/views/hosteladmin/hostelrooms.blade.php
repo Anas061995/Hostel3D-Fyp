@@ -117,7 +117,7 @@
   <div id="inventory" class="tab-pane fade in active">
     <br>
     <div class="row">
-      <div class="col-lg-6">
+      <div class="col-lg-4">
         <div class="box box-default collapsed-box box-solid">
           <div class="box-header with-border">
             <h5 class="box-title">ADD </h5>
@@ -150,7 +150,7 @@
           </div>
         </div>
       </div>
-       <div class="col-lg-6">
+       <div class="col-lg-4">
         <div class="box box-default collapsed-box box-solid">
           <div class="box-header with-border">
             <h5 class="box-title">UPDATE </h5>
@@ -163,11 +163,15 @@
           <div class="box-body">
             <form>
   <div class="form-group">
-    <label for="exampleInputEmail1">Name</label>
+    <label for="exampleInputEmail1"> Search by Name</label>
     <select class="form-control" id="exampleSelect1">
       <option>Bed</option>
       <option>Chair</option>
     </select>
+  </div>
+  <div class="form-group">
+    <label for="exampleInputEmail1">Name</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" >
   </div>
   <div class="form-group">
     <label for="exampleInputPassword1">Quantity</label>
@@ -186,6 +190,31 @@
           </div>
         </div>
       </div>
+      <div class="col-lg-4">
+       <div class="box box-default collapsed-box box-solid">
+         <div class="box-header with-border">
+           <h5 class="box-title">REMOVE </h5>
+
+           <div class="box-tools pull-right">
+             <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-plus"></i>
+             </button>
+           </div>
+         </div>
+         <div class="box-body">
+           <form>
+ <div class="form-group">
+   <label for="exampleInputEmail1">Name</label>
+   <select class="form-control" id="exampleSelect1">
+     <option>Bed</option>
+     <option>Chair</option>
+   </select>
+ </div>
+ 
+ <button type="submit" class="btn btn-primary">Remove</button>
+</form>
+         </div>
+       </div>
+     </div>
     </div>
 
   </div>

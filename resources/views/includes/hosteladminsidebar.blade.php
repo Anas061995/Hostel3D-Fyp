@@ -29,6 +29,7 @@
     <li class=""><a href="{{route('hosteladmin.reports')}}"><i class="fa fa-link"></i> <span>Reports</span></a></li>
     <li class=""><a href="{{route('hosteladmin.history')}}"><i class="fa fa-link"></i> <span>History</span></a></li>
     <li><a href="{{route('hosteladmin.complaints')}}"><i class="fa fa-link"></i> <span>Complaints</span></a></li>
+    <li><a href=""><i class="fa fa-link"></i> <span>Services/Others</span></a></li>
     <li><a href="{{route('hosteladmin.model')}}"><i class="fa fa-link"></i> <span>My Hostel Model</span></a></li>
   </ul>
 

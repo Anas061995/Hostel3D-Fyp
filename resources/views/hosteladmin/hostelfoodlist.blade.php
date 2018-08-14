@@ -31,8 +31,8 @@
     <!-- Main content -->
     <section class="content container-fluid">
       <div class="row" style="margin-top: -23px;">
-        <div class="col-lg-4" style="margin-bottom: 11px;" >
-          <a  style="margin-left: 48px; width: 166px;" onclick="ShowModal(this)" class="btn btn-primary">Add Food Item</a>
+        <div class="col-md-12" style="margin-bottom: 11px;" >
+          <a  style=" margin-right: 42px; width: 166px;" onclick="ShowModal(this)" class="btn btn-primary pull-right">Add Food Item</a>
         </div>
       <div class="col-xs-12">
         <div class="box">
@@ -68,8 +68,8 @@
                 <td>Good Food</td>
                 <td>Dinner</td>
                 <td style="text-align: center">
-                  <a type="submit"style="width: 100px;" class="btn btn-primary btn-xs " onclick="ShowModal(this)">Edit</a>&nbsp; &nbsp;
-                  <a type="submit" style="width: 100px;" class="btn btn-primary btn-xs "> Delete</a>&nbsp; &nbsp;
+                  <a type="submit"style="width: 100px;" onclick="ShowModalEdit(this)" class="btn btn-primary btn-xs bg-yellow ">Edit</a>&nbsp; &nbsp;
+                  <a type="submit" style="width: 100px;" onclick="ShowModalDelete(this)" class="btn btn-primary btn-xs bg-red"> Delete</a>&nbsp; &nbsp;
                 </td>
               </tr>
             </tbody>
@@ -134,7 +134,77 @@
   </div>
 </div>
 
+<div class="modal" id ="modalFoodEdit" >
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
 
+        <button type="button" class="close" onclick="closeModelEdit()" id="closeadd"  aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <h3 class="modal-title" style="text-align: center;">Edit Selected Food Item</h3>
+      </div>
+<div class="modal-body">
+  <div class="row">
+    <div class="col-md-6" style="margin-left: 137px; padding: 21px;">
+
+        <div class="card-body">
+          <!-- Title -->
+          <form>
+  <div class="form-group">
+    <label for="itemname">Item Name</label>
+<input type="text" class="form-control" id="itemname" >
+  </div>
+  <div class="form-group">
+  <label for="itemcategory">Item Category</label>
+  <select class="form-control" id="itemcategory">
+    <option>Breakfast</option>
+    <option>Lunch</option>
+      <option>Dinner</option>
+  </select>
+  </div>
+  <div class="form-group">
+  <label for="description"> Item Description</label>
+<textarea class="form-control" placeholder="Describe item..."></textarea>
+  </div>
+  </form>
+          <a href="#" style="margin-left: 48px;" class="btn btn-primary">Save</a>
+        </div>
+      </div>
+  </div>
+    </div>
+    </div>
+  </div>
+</div>
+<div class="modal" id ="modalFoodDelete" >
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+
+        <button type="button" class="close" onclick="closeModelDelete()" id="closeadd"  aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <h3 class="modal-title" style="text-align: center;">Delete Food Item</h3>
+      </div>
+<div class="modal-body">
+  <div class="row">
+    <div class="col-md-12">
+      <!-- Title -->
+<center><p style="font-size: larger;font-weight: normal;"> Are your sure you want to delete selected food item? </p> </center>
+</div>
+  </div>
+   </div>
+<div class="modal-footer">
+  <div class="col-md-6">
+  <input type="submit" class="btn btn-success form-control" value="Confirm" >
+       </div>
+       <div class="col-md-6">
+       <input type="submit" class="btn btn-danger form-control" value="Cancel" >
+            </div>
+          </div>
+  </div>
+</div>
+</div>
 @endsection
 
 @section('scripts')
@@ -154,6 +224,34 @@ function ShowModal(myid)
  $("#rejectbutton").val(id);
  $("#modalFood").show();
 
+}
+</script>
+<script type="text/javascript">
+function closeModelEdit()
+{
+            $('#modalFoodEdit').hide();
+            $(document.body).removeClass("modal-open");
+  $(".modal-backdrop").remove();
+        }
+</script>
+<script>
+function ShowModalEdit(myid)
+{
+ $("#modalFoodEdit").show();
+}
+</script>
+<script type="text/javascript">
+function closeModelDelete()
+{
+            $('#modalFoodDelete').hide();
+            $(document.body).removeClass("modal-open");
+  $(".modal-backdrop").remove();
+        }
+</script>
+<script>
+function ShowModalDelete(myid)
+{
+ $("#modalFoodDelete").show();
 }
 </script>
 <script src="{{asset('asset/bower_components/jquery/dist/jquery.min.js')}}"></script>
