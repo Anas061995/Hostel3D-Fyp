@@ -31,8 +31,8 @@
     <!-- Main content -->
     <section class="content container-fluid">
       <div class="row" style="margin-top: -23px;">
-        <div class="col-lg-4" style="margin-bottom: 11px;" >
-          <a  style="margin-left: 48px; width: 166px;" onclick="ShowModal(this)" class="btn btn-primary">Add Mess Menu</a>
+        <div class="col-md-12" style="margin-bottom: 11px;" >
+          <a  style="margin-right: 42px; width: 166px;" onclick="ShowModal(this)" class="btn btn-primary pull-right">Add Mess Menu</a>
         </div>
       <div class="col-xs-12">
         <div class="box">
@@ -85,8 +85,8 @@
                       <td>Beans</td>
                       <td> Mash Dal</td>
                 <td style="text-align: center">
-                  <a type="submit"style="width: 100px;" class="btn btn-primary btn-xs ">Edit</a>&nbsp; &nbsp;
-                  <a type="submit" style="width: 100px;" class="btn btn-primary btn-xs "> Delete</a>&nbsp; &nbsp;
+                  <a style="width: 100px;" onclick="ShowModalMenuEdit(this)" class="btn btn-primary btn-xs bg-yellow ">Edit</a>&nbsp; &nbsp;
+                  <a  style="width: 100px;" onclick="ShowModalMenuDelete(this)" class="btn btn-primary btn-xs bg-red "> Delete</a>&nbsp; &nbsp;
                 </td>
               </tr>
             </tbody>
@@ -120,8 +120,8 @@
                               <td>Beans</td>
                               <td> Mash Dal</td>
                         <td style="text-align: center">
-                          <a type="submit"style="width: 100px;" class="btn btn-primary btn-xs ">Edit</a>&nbsp; &nbsp;
-                          <a type="submit" style="width: 100px;" class="btn btn-primary btn-xs "> Delete</a>&nbsp; &nbsp;
+                          <a style="width: 100px;" onclick="ShowModalMenuEdit(this)" class="btn btn-primary btn-xs bg-yellow ">Edit</a>&nbsp; &nbsp;
+                          <a  style="width: 100px;" onclick="ShowModalMenuDelete(this)" class="btn btn-primary btn-xs bg-red"> Delete</a>&nbsp; &nbsp;
                         </td>
                       </tr>
                     </tbody>
@@ -155,8 +155,8 @@
                                       <td>Beans</td>
                                       <td> Mash Dal</td>
                                 <td style="text-align: center">
-                                  <a type="submit"style="width: 100px;" class="btn btn-primary btn-xs ">Edit</a>&nbsp; &nbsp;
-                                  <a type="submit" style="width: 100px;" class="btn btn-primary btn-xs "> Delete</a>&nbsp; &nbsp;
+                                  <a style="width: 100px;" onclick="ShowModalMenuEdit(this)" class="btn btn-primary btn-xs bg-yellow ">Edit</a>&nbsp; &nbsp;
+                                  <a  style="width: 100px;"onclick="ShowModalMenuDelete(this)" class="btn btn-primary btn-xs bg-red "> Delete</a>&nbsp; &nbsp;
                                 </td>
                               </tr>
                             </tbody>
@@ -247,15 +247,121 @@
       </div>
         <a href="#" style="margin-left: 363px; width:120px;" class="btn btn-primary">Save</a>
     </form>
-
-
-
     </div>
     </div>
   </div>
 </div>
+</div>
+</div>
 
+<div class="modal" id ="modalMenuEdit" >
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
 
+        <button type="button" class="close" onclick="closeModelEdit()" id="closeadd"  aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <h3 class="modal-title" style="text-align: center;">Edit Mess Menu</h3>
+      </div>
+<div class="modal-body">
+  <div class="row">
+    <div class="col-md-8" style="margin-left: 96px; padding: 5px;">
+      <form>
+      <div class="form-group">
+      <label for="menucategory">Menu Category</label>
+      <select class="form-control" id="menucategory">
+        <option>Breakfast</option>
+        <option>Lunch</option>
+          <option>Dinner</option>
+      </select>
+      </div>
+      <div class="form-group">
+        <label for="SelectfoodforMon">Select Food Item For Monday</label>
+        <select style="width: 164px;     margin-left: 34px;" id="MonItem">
+          <option>Item1</option>
+          <option>Item2</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="SelectfoodforMon">Select Food Item For Tuesday</label>
+        <select style="width: 164px; margin-left: 31px;" id="TueItem">
+          <option>Item1</option>
+          <option>Item2</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="SelectfoodforMon">Select Food Item For Wednesday</label>
+        <select style="margin-left: 12px;  width: 164px;" id="WedItem">
+          <option>Item1</option>
+          <option>Item2</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="SelectfoodforMon">Select Food Item For Thursday</label>
+        <select style="width: 164px; margin-left: 25px;" id="ThurItem">
+          <option>Item1</option>
+          <option>Item2</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="SelectfoodforMon">Select Food Item For Friday</label>
+        <select style="width: 164px; margin-left: 44px;" id="FriItem">
+          <option>Item1</option>
+          <option>Item2</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="SelectfoodforMon">Select Food Item For Saturday</label>
+        <select style="width: 164px;     margin-left: 26px;" id="MonItem">
+          <option>Item1</option>
+          <option>Item2</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="SelectfoodforMon">Select Food Item For Sunday</label>
+        <select style="width: 164px; margin-left: 34px;" id="MonItem">
+          <option>Item1</option>
+          <option>Item2</option>
+        </select>
+      </div>
+        <a href="#" style="margin-left: 363px; width:120px;" class="btn btn-primary">Save</a>
+    </form>
+    </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+<div class="modal" id ="modalMenuDelete" >
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+
+        <button type="button" class="close" onclick="closeModelDelete()" id="closeadd"  aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <h3 class="modal-title" style="text-align: center;">Delete Mess Menu</h3>
+      </div>
+<div class="modal-body">
+  <div class="row">
+    <div class="col-md-12">
+      <!-- Title -->
+<center><p style="font-size: larger;font-weight: normal;"> Are your sure you want to delete selected mess menu? </p> </center>
+</div>
+  </div>
+   </div>
+<div class="modal-footer">
+  <div class="col-md-6">
+  <input type="submit" class="btn btn-success form-control" value="Confirm" >
+       </div>
+       <div class="col-md-6">
+       <input type="submit" class="btn btn-danger form-control" value="Cancel" >
+            </div>
+          </div>
+  </div>
+</div>
+</div>
 @endsection
 
 @section('scripts')
@@ -274,6 +380,34 @@ function ShowModal(myid)
 
  $("#modaladdmenu").show();
 
+}
+</script>
+<script type="text/javascript">
+function closeModelDelete()
+{
+            $('#modalMenuDelete').hide();
+            $(document.body).removeClass("modal-open");
+  $(".modal-backdrop").remove();
+        }
+</script>
+<script>
+function ShowModalMenuDelete(myid)
+{
+ $("#modalMenuDelete").show();
+}
+</script>
+<script type="text/javascript">
+function closeModelEdit()
+{
+            $('#modalMenuEdit').hide();
+            $(document.body).removeClass("modal-open");
+  $(".modal-backdrop").remove();
+        }
+</script>
+<script>
+function ShowModalMenuEdit(myid)
+{
+ $("#modalMenuEdit").show();
 }
 </script>
 <script src="{{asset('asset/bower_components/jquery/dist/jquery.min.js')}}"></script>

@@ -10,7 +10,7 @@
     <title>{{ config('app.name', 'BookIt3dHostel') }}</title>
 
     <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+  
     @yield('styles')
 </head>
 

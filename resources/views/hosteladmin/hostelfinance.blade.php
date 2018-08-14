@@ -14,7 +14,6 @@
 @include('includes.nav')
 @include('includes.hosteladminsidebar')
 <div class="content-wrapper">
-
     <section class="content-header">
       <h1>
         Hostel Admin/
@@ -22,13 +21,11 @@
       </h1>
       <br>
       <br>
-
       <ol class="breadcrumb">
         <li><a href="#"><i class="fa fa-dashboard"></i> Level</a></li>
         <li class="active">Here</li>
       </ol>
     </section>
-
     <!-- Main content -->
     <section class="content container-fluid">
   <div class="row" style="padding-left: 86px;  margin-top: -4px;" >
@@ -118,20 +115,33 @@
         <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
       </div>
     </div>
-
   </div>
+  <div class= "row" style="padding: 65px; text-align: center; background-color: #dcd8d1">
+      <div class="col-md-3" style="">
+      <a  href="">  <img src="{{asset('asset/img/a.png')}}"> </img> </a>
+      <a  href=""><h4 style="  text-align: center;  font-size: x-large;"> Hostel Rent </h4> </a>
+      </div>
+      <div class="col-md-3">
+      <a  href="">  <img src="{{asset('asset/img/b.png')}}"> </img> </a>
+        <a  href="">  <h4 style="  text-align: center;  font-size: x-large;"> Utility Bills </h4> </a>
+      </div>
+      <div class="col-md-3">
+      <a  href="">  <img src="{{asset('asset/img/aa.png')}}"> </img> </a>
+      <a  href="">  <h4 style="  text-align: center; font-size: x-large;"> Inventory Bills </h4> </a>
+      </div>
+      <div class="col-md-3">
+      <a  href="">  <img src="{{asset('asset/img/service.png')}}"> </img> </a>
+      <a  href="">  <h4 style=" text-align: center;   font-size: x-large;"> Service Charges </h4> </a>
+      </div>
+    </div>
+
     </section>
 
   </div>
-
     @include('includes.footer')
 @endsection
-
 @section('scripts')
 <script src="{{asset('asset/bower_components/jquery/dist/jquery.min.js')}}"></script>
-<!-- Bootstrap 3.3.7 -->
 <script src="{{asset('asset/bower_components/bootstrap/dist/js/bootstrap.min.js')}}"></script>
-<!-- AdminLTE App -->
 <script src="{{asset('asset/js/adminlte.min.js')}}"></script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBQ384eNh2btXKG7M__gzqPAOKoq6skHOY&callback=myMap"></script>
 @endsection

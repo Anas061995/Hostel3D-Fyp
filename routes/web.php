@@ -7,6 +7,9 @@ Route::get('/', function () {
 })->name('welcome');
 
 Auth::routes();
+Route::get('/webhome', 'webcontrollers\webhomeController@index')->name('webview.webhome');
+Route::get('/webregister', 'webcontrollers\webregisterController@index')->name('webview.register');
+Route::get('/weblogin', 'webcontrollers\webloginController@index')->name('webview.weblogin');
 Route::GET('/logout', 'Auth\LoginController@logout')->name('user.logout');
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/superadmindashboard', 'superadmincontrollers\SuperadmindashboardController@index')->name('superadmin.dashboard');
