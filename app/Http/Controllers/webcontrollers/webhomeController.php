@@ -12,7 +12,7 @@ class webhomeController extends Controller
      */
     public function __construct()
     {
-
+        
     }
     /**
      * Show the application dashboard.
