@@ -23,15 +23,11 @@ class residentController extends Controller
      */
     public function index()
     {
-      $user = \Auth::user();
-      if ($user->hasRole('hosteladmin'))
-      {
-              $residentdetails = \App\Models\Hostel::all();
-                  return view('hosteladmin.hostelresidents',['residentdetails'=>$residentdetails]);
-          }
-      else
-      {
-          return redirect()->route('welcome')->with(['message' => 'You are not hostel admin']);
-      }
-}
-}
+      return view('hosteladmin.hostelresidents');
+
+    }
+    public function residentdetails()
+    {
+        return view('hosteladmin.requestedresidentdetails');
+    }
+  }

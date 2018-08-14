@@ -23,29 +23,11 @@ class complaintsController extends Controller
      */
     public function index()
     {
-      {
-        $user = \Auth::user();
-        if ($user->hasRole('hosteladmin'))
-        {
-                $residentcomplaints = \App\Models\Hostel::all();
-                    return view('hosteladmin.hostelcomplaints',['residentcomplaints'=>$residentcomplaints]);
-            }
-        else
-        {
-            return redirect()->route('welcome')->with(['message' => 'You are not hostel admin']);
-        }
-  }
-}
-public function completed(Request $request)
-{
-$var_id= $request->id;
-$user = \App\User::where('id', $var_id)->first();
-$user->syncPermissions('hostels');
-return redirect()->back()->with(['message'=> 'Status has been successfully changed']);
-}
-  public function pending(Request $request)
-  {
-  $var_id= $request->id;
-  dd($var_id);
-  }
-  }
+      return view('hosteladmin.hostelcomplaints');
+
+    }
+    public function complaintdetails()
+    {
+        return view('hosteladmin.requestedresidentcomplaints');
+    }
+    }

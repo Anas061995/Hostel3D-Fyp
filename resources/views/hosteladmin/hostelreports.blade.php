@@ -1,6 +1,12 @@
 @extends('layouts.app')
 @section('styles')
+<link rel="stylesheet" href="{{asset('asset/css/style.min.css')}}">
+<link rel="stylesheet" href="{{asset('asset/css/style.css')}}">
+<link rel="stylesheet" href="{{asset('asset/css/mdb.min.css')}}">
+<link rel="stylesheet" href="{{asset('asset/css/mdb.css')}}">
+
   <link rel="stylesheet" href="{{asset('asset/bower_components/bootstrap/dist/css/bootstrap.min.css')}}">
+
   <!-- Font Awesome -->
   <link rel="stylesheet" href="{{asset('asset/bower_components/font-awesome/css/font-awesome.min.css')}}">
   <!-- Ionicons -->
@@ -8,13 +14,13 @@
   <!-- Theme style -->
   <link rel="stylesheet" href="{{asset('asset/css/AdminLTE.min.css')}}">
   <link rel="stylesheet" href="{{asset('asset/css/skins/skin-blue.min.css')}}">
+
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
 @endsection
 @section('content')
 @include('includes.nav')
 @include('includes.hosteladminsidebar')
 <div class="content-wrapper">
-
     <section class="content-header">
       <h1>
         Hostel Admin/
@@ -22,121 +28,128 @@
       </h1>
       <br>
       <br>
-
       <ol class="breadcrumb">
         <li><a href="#"><i class="fa fa-dashboard"></i> Level</a></li>
         <li class="active">Here</li>
       </ol>
-
-      <!-- Main content -->
-  <section class="content">
-
-    <div style="margin-left:145px;">
-      @foreach ($reportdetails as $var)
-      <div class="col-md-5">
-        <!-- Profile Image -->
-        <div class="box box-primary">
-          <div class="box-body box-profile">
-            <img class="profile-user-img img-responsive img-circle" src="../../asset/img/photo3.jpg" alt="Mess picture">
-            <br>
-            </br>
-            <h3 class="profile-username text-center">Mess Report</h3>
-            <p class="text-muted text-center">Mess Menus</p>
-
-            <center><a type="submit" class="btn btn-primary btn-xs "
-            onclick="event.preventDefault(); document.getElementById('form_{{ $var->id }}').submit();"
-            href="{{route('generatemessreport' , $var->id )}}"> Generate Mess Report</a></center>
-            <form id="form_{{ $var->id }}" action="{{ route('generatemessreport') }}" method="POST" style="display: none;">
-                {{ csrf_field() }}
-                <input type="hidden" name="complaintdetails" value="{{$var->id}}" >
-            </form>
-          </div>
-          <!-- /.box-body -->
-        </div>
-      </div>
-        <!-- /.box -->
-
-        <div class="col-md-5">
-          <!-- Profile Image -->
-          <div class="box box-primary">
-            <div class="box-body box-profile">
-
-              <img class="profile-user-img img-responsive img-circle" src="../../asset/img/photo3.jpg" alt="Finance picture">
-              <br>
-              </br>
-              <h3 class="profile-username text-center">Finance Report</h3>
-              <p class="text-muted text-center">Financial </p>
-              <center><a type="submit" class="btn btn-primary btn-xs">Generate Finance Report</a></center>
-            </div>
-            <!-- /.box-body -->
-          </div>
-
     </section>
-
     <!-- Main content -->
     <section class="content container-fluid">
+      <div class= "row content container-fluid">
+        <!-- Card -->
+    <div class="card col-md-3 " style=" padding:25px; margin-left:200px;">
+      <!-- Card image -->
+      <img class="card-img-top"style="height: 175px; width:100%;" src="{{asset('asset/img/foodlist.jpg')}}" alt="Card image cap" >
+      <!-- Card content -->
+      <div class="card-body">
+        <!-- Title -->
+        <h4 class="card-title"><a>Food Report</a></h4>
+        <!-- Text -->
+        <p  style= "font-size: small !important;" class="card-text">Report of food items on the basis of users reviews </p>
+        <!-- Button -->
+        <center><a href="{{route('hosteladmin.requestedfoodreport')}}" class="btn btn-primary">VIEW</a></center>
+      </div>
+    </div>
+    <!-- Card -->
 
+    <!-- Card -->
+<div class="card col-md-3 col-md-offset-2"  style=" padding:25px;">
+  <!-- Card image -->
+  <img class="card-img-top"style=" height: 175px; width:100%;" src="{{asset('asset/img/finance.jpg')}}" alt="Card image cap" >
+  <!-- Card content -->
+  <div class="card-body">
+    <!-- Title -->
+    <h4 class="card-title"><a>Finance Report</a></h4>
+    <!-- Text -->
+    <p style ="font-size: small;" class="card-text">List of all the payments, dues and expenses of hostel</p>
+    <!-- Button -->
+    <center><a href="{{route('hosteladmin.requestedfinancereport')}}" class="btn btn-primary">VIEW</a></center>
+  </div>
+</div>
+<!-- Card -->
+</div>
     </section>
-
   </div>
 @include('includes.footer')
-</div>
-@endforeach
 @endsection
 
+@section('modal')
+<div class="modal" id ="modalmesspublish" >
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
 
+        <button type="button" class="close" onclick="closeModel()" id="closeadd"  aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <h3 class="modal-title" style="text-align: center;">Publish Mess Menu</h3>
+      </div>
+<div class="modal-body">
+<div class="row">
+  <div class="col-md-6 card" style="margin-left: 137px; padding: 21px;">
+
+      <div class="card-body">
+        <!-- Title -->
+        <form>
+<div class="form-group">
+  <label for="Selectmenubreakfast">Select Menu For Breakfast</label>
+  <select class="form-control" id="menubreakfast">
+    <option>Menu1</option>
+    <option>Menu2</option>
+    <option>Menu3</option>
+  </select>
+</div>
+<div class="form-group">
+<label for="Selectmmenulunch">Select Menu For Lunch</label>
+<select class="form-control" id="menulunch">
+  <option>Menu1</option>
+  <option>Menu2</option>
+</select>
+</div>
+<div class="form-group">
+<label for="selectdinnermenu">Select Menu For Dinner</label>
+<select class="form-control" id="menudinner">
+  <option>Menu5</option>
+  <option>Menu6</option>
+</select>
+</div>
+</form>
+        <a href="#" style="margin-left: 48px;" class="btn btn-primary">Publish Menu</a>
+      </div>
+    </div>
+</div>
+  </div>
+</div>
+            </div>
+          </div>
+@endsection
 @section('scripts')
-<script src="{{asset('asset/js/components/jquery/dist/jquery.min.js')}}"></script>
+<script type="text/javascript">
+            $(function () {
+                $('#datetimepicker1').datetimepicker();
+            });
+        </script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+<script src="{{asset('asset/bower_components/jquery/dist/jquery.min.js')}}"></script>
 <!-- Bootstrap 3.3.7 -->
-<script src="{{asset('asset/js/components/bootstrap/dist/js/bootstrap.min.js')}}"></script>
+<script src="{{asset('asset/bower_components/bootstrap/dist/js/bootstrap.min.js')}}"></script>
 <!-- AdminLTE App -->
 <script src="{{asset('asset/js/adminlte.min.js')}}"></script>
-
-<script src="{{asset('asset/js/chart.js/Chart.js"></script>
-
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBQ384eNh2btXKG7M__gzqPAOKoq6skHOY&callback=myMap"></script>
-
 <script type="text/javascript">
-function barchart() {
-    //-------------
-    //- BAR CHART -
-    //-------------
-    var barChartCanvas                   = $('#barChart').get(0).getContext('2d')
-    var barChart                         = new Chart(barChartCanvas)
-    var barChartData                     = areaChartData
-    barChartData.datasets[1].fillColor   = '#00a65a'
-    barChartData.datasets[1].strokeColor = '#00a65a'
-    barChartData.datasets[1].pointColor  = '#00a65a'
-    var barChartOptions                  = {
-      //Boolean - Whether the scale should start at zero, or an order of magnitude down from the lowest value
-      scaleBeginAtZero        : true,
-      //Boolean - Whether grid lines are shown across the chart
-      scaleShowGridLines      : true,
-      //String - Colour of the grid lines
-      scaleGridLineColor      : 'rgba(0,0,0,.05)',
-      //Number - Width of the grid lines
-      scaleGridLineWidth      : 1,
-      //Boolean - Whether to show horizontal lines (except X axis)
-      scaleShowHorizontalLines: true,
-      //Boolean - Whether to show vertical lines (except Y axis)
-      scaleShowVerticalLines  : true,
-      //Boolean - If there is a stroke on each bar
-      barShowStroke           : true,
-      //Number - Pixel width of the bar stroke
-      barStrokeWidth          : 2,
-      //Number - Spacing between each of the X value sets
-      barValueSpacing         : 5,
-      //Number - Spacing between data sets within X values
-      barDatasetSpacing       : 1,
-      //String - A legend template
-      legendTemplate          : '<ul class="<%=name.toLowerCase()%>-legend"><% for (var i=0; i<datasets.length; i++){%><li><span style="background-color:<%=datasets[i].fillColor%>"></span><%if(datasets[i].label){%><%=datasets[i].label%><%}%></li><%}%></ul>',
-      //Boolean - whether to make the chart responsive
-      responsive              : true,
-      maintainAspectRatio     : true
-    }
-
-    barChartOptions.datasetFill = false
-    barChart.Bar(barChartData, barChartOptions)
-  })
+function closeModel()
+{
+            $('#modalmesspublish').hide();
+            $(document.body).removeClass("modal-open");
+  $(".modal-backdrop").remove();
+        }
+</script>
+<script>
+function ShowModal(myid)
+{
+ $("#modalmesspublish").show();
+}
 </script>
 @endsection
